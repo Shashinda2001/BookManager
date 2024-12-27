@@ -33,4 +33,14 @@ export class BookListComponent implements OnInit {
   updateBook(id: number){
     this.router.navigate(['UpdateBook',id]);
   }
+
+  deleteBook(id:number){
+    const confirmed = confirm('Are you sure you want to delete this book?');
+    if(confirmed){
+      this.bookService.deleteBook(id).subscribe(data=>{
+        this.getBooks();
+      })
+    }
+    
+  }
 }
