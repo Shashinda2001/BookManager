@@ -1,1 +1,22 @@
-<p>book-info works!</p>
+<div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-body text-center">
+        <!-- Book Title -->
+        <h2 class="card-title text-center mb-4">{{ book.title }}</h2>
+  
+        <!-- Book Details -->
+        <div class="book-details">
+          <p><strong>Author:</strong> {{ book.author }}</p>
+          <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+          <p><strong>Publication Date:</strong> {{ book.publicationDate | date:'yyyy/MM/dd' }}</p>
+           
+        </div>
+  
+        <!-- Back to Books List Button -->
+        <div class="text-center mt-4">
+          <a routerLink="/books" class="btn btn-primary">Back to Books List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

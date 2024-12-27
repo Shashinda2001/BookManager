@@ -45,6 +45,6 @@ export class BookListComponent implements OnInit {
   }
 
   viewBook(id:number){
-
+    this.router.navigate(['bookInfo',id]);
   }
 }
