@@ -1,0 +1,49 @@
+<div class="container-sm mt-5" style="background-color: rgba(255, 255, 255, 0);">
+    <div class="card shadow-lg p-4" style="background-color: rgba(255, 255, 255, 0.6);">
+        
+        <h3 class="text-right mb-4">Create New Book</h3>
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <form (ngSubmit)="onSubmit()">
+
+                    <!-- Title Field -->
+                    <div class="form-group mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" [(ngModel)]="book.title" name="title"
+                            required placeholder="Enter book title">
+                    </div>
+
+                    <!-- Author Field -->
+                    <div class="form-group mb-3">
+                        <label for="author" class="form-label">Author</label>
+                        <input type="text" class="form-control" id="author" [(ngModel)]="book.author" name="author"
+                            required placeholder="Enter author name">
+                    </div>
+
+                    <!-- ISBN Field -->
+                    <div class="form-group mb-3">
+                        <label for="isbn" class="form-label">ISBN</label>
+                        <input type="text" class="form-control" id="isbn" [(ngModel)]="book.isbn" name="isbn" required
+                            placeholder="Enter ISBN number">
+                    </div>
+
+                    <!-- Publication Date Field -->
+                    <div class="form-group mb-3">
+                        <label for="publicationDate" class="form-label">Publication Date</label>
+                        <input type="date" class="form-control" id="publicationDate" [(ngModel)]="book.publicationDate"
+                            name="publicationDate" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success mt-3 w-100">Create Book</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5 d-none d-lg-flex  d-flex flex-column align-items-center justify-content-center p-4">
+                
+                <img src="add.png" alt="Your Image" class="img-fluid mb-4" style="width: 70%; height: auto;">
+            </div>
+        </div>
+    </div>
+</div>
