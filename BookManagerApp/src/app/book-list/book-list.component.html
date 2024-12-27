@@ -22,8 +22,9 @@
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.publicationDate | date:'yyyy/MM/dd'}}</td>
-        <td>
-            <button (click)="updateBook(book.id)" class="btn btn-success">  <i class="fas fa-edit"></i></button>
+        <td class="text-center">
+            <button (click)="updateBook(book.id)" class="btn btn-success mx-2">  <i class="fas fa-edit"></i></button>
+            <button (click)="deleteBook(book.id)" class="btn btn-danger mx-2">  <i class="fas fa-trash-alt"></i></button>
         </td>
       </tr>
     </tbody>
