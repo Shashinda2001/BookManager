@@ -43,4 +43,8 @@ export class BookListComponent implements OnInit {
     }
     
   }
+
+  viewBook(id:number){
+
+  }
 }
