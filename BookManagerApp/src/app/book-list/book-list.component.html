@@ -14,6 +14,7 @@
         <th>Title</th>
         <th>Author</th>
         <th>Publication Date</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,9 @@
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.publicationDate | date:'yyyy/MM/dd'}}</td>
+        <td>
+            <button (click)="updateBook(book.id)" class="btn btn-success">  <i class="fas fa-edit"></i></button>
+        </td>
       </tr>
     </tbody>
   </table>
