@@ -1,0 +1,29 @@
+
+<h2>Books</h2>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>PublicationDate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let book of books">
+
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.publicationDate | date:'yyyy/MM/dd'}}</td>
+
+        </tr>
+
+    </tbody>
+
+
+</table>
+
+
